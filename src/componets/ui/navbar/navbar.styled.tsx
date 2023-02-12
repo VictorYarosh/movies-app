@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Navbar = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 80px;
-  //background: rgba(18, 24, 41, 0.8);
   backdrop-filter: blur(20px);
 `;
 
@@ -13,6 +12,7 @@ export const Links = styled.ul`
   color: white;
   display: flex;
   list-style: none;
+
   @media (max-width: 425px) {
     margin-top: 20px;
     font-size: 15px;
