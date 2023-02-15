@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Container } from "styled-bootstrap-grid";
 
-export const Navbar = styled.nav`
+export const Navbar = styled(Container)`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 80px;
   backdrop-filter: blur(20px);
 `;

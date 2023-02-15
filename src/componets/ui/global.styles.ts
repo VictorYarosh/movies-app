@@ -2,13 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(217deg, #6447b5, rgba(255, 0, 0, 0) 70.71%),
-    linear-gradient(127deg, #82e1ff, rgba(0, 255, 0, 0) 70.71%)
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

@@ -1,7 +1,9 @@
 import React from "react";
+
+import Image from "next/image";
 import { Links, LinksPage, Navbar } from "./navbar.styled";
 import Logo from "../logo";
-import Image from "next/image";
+
 import ArrowNavbar from "../../../assets/images/icons/arrow-right.png";
 
 const NavBar = () => {
