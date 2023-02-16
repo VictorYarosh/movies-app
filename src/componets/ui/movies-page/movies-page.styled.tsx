@@ -3,6 +3,7 @@ import { Container, Col } from "styled-bootstrap-grid";
 
 export const MoviesPageWrapper = styled(Container)`
   display: flex;
+  padding-top: 50px;
 `;
 export const Column = styled(Col)`
   display: flex;
@@ -24,30 +25,45 @@ export const TitleDescription = styled.p`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  padding: 0 0 14px 0;
 `;
 
 export const SearchInput = styled.div`
+  width: 75%;
+
+  form {
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid #323b54;
+    border-radius: 12px;
+  }
+
+  button {
+    padding: 20px;
+    position: absolute;
+    cursor: pointer;
+    background: #121829;
+    border: none;
+    border-radius: 12px;
+  }
   input {
-    width: 85%;
-    height: 30px;
-    margin: 5px 3px;
+    width: 100%;
+    height: 64px;
+    padding: 0 65px;
     border: none;
     color: white;
     border-radius: 10px;
-    padding: 0 5px;
-    background: hsl(262, 80%, 25%, 0.3);
-  }
-  button {
-    border: 1px;
-    height: 32px;
-    width: 10%;
-    cursor: pointer;
-    background: hsl(262, 80%, 25%, 0.3);
-    border-radius: 10px;
+
+    background: #121829;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
   }
 `;
-export const SearchIconWrapper = styled.img`
-  width: 15px;
-  height: 15px;
-  margin: -1px;
+export const SearchIconWrapper = styled.div`
+  width: 24px;
+  height: 24px;
+`;
+
+export const GroupLinks = styled.div`
+  display: flex;
 `;

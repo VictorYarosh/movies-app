@@ -1,5 +1,10 @@
+import { useState } from "react";
 const useMoviesPage = () => {
-  const handleOnSubmit = () => {};
+  const [movies, setMovies] = useState(false);
+
+  const handleOnSubmit = () => {
+    setMovies(true);
+  };
   return {
     handleOnSubmit,
   };

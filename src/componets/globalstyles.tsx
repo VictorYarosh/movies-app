@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     background: #121829;
+    //background-image: url("../assets/images/background.png");
   }
 `;
 
