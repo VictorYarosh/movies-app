@@ -1,7 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import { Row } from "styled-bootstrap-grid";
 import Image from "next/legacy/image";
-// import Image from "next/image";
 import { Form, Text } from "react-uforms";
 
 import {
@@ -13,22 +13,17 @@ import {
   TitleDescription,
   TitleWrapper,
   GroupLinks,
+  PurpleLink,
 } from "./movies-page.styled";
 
 import useMoviesPage from "./use-movies-page";
-import { Links, LinksPage } from "../navbar/navbar.styled";
+import { LinksWrapper, LinksBtn } from "../navbar/navbar.styled";
 import SearchIcon from "../../../assets/images/icons/search-normal.png";
-import Link from "next/link";
-import BackgroundImage from "../../../assets/images/background.png";
-import { BackgroundImageWrapper } from "../../complex/user-list/user-list.styled";
 
 const MoviesPage = () => {
   const { handleOnSubmit } = useMoviesPage();
   return (
     <MoviesPageWrapper>
-      <BackgroundImageWrapper>
-        <Image src={BackgroundImage} alt="bgImage" />
-      </BackgroundImageWrapper>
       <Row>
         <Column xl={8}>
           <TitleWrapper>
@@ -55,17 +50,19 @@ const MoviesPage = () => {
             </SearchInput>
 
             <GroupLinks>
-              <Links>
-                <LinksPage>
-                  <Link href="/all">All</Link>
-                </LinksPage>
-                <LinksPage>
+              <LinksWrapper>
+                <LinksBtn>
+                  <Link href="/all" passHref legacyBehavior>
+                    <PurpleLink key="primary">All</PurpleLink>
+                  </Link>
+                </LinksBtn>
+                <LinksBtn>
                   <Link href="/movies">Movies</Link>
-                </LinksPage>
-                <LinksPage>
+                </LinksBtn>
+                <LinksBtn>
                   <Link href="/tv-shows">TV Shows</Link>
-                </LinksPage>
-              </Links>
+                </LinksBtn>
+              </LinksWrapper>
             </GroupLinks>
           </TitleWrapper>
         </Column>

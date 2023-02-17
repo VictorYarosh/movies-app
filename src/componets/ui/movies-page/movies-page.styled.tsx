@@ -30,6 +30,7 @@ export const TitleDescription = styled.p`
 
 export const SearchInput = styled.div`
   width: 75%;
+  padding-bottom: 50px;
 
   form {
     background: rgba(0, 0, 0, 0.1);
@@ -66,4 +67,10 @@ export const SearchIconWrapper = styled.div`
 
 export const GroupLinks = styled.div`
   display: flex;
+`;
+
+export const PurpleLink = styled.a`
+  background-color: #7b6ef6;
+  background: ${(props) => (props.primary ? "palevioletred" : "white")};
+  color: ${(props) => (props.primary ? "white" : "palevioletred")};
 `;

@@ -13,6 +13,7 @@ export const Links = styled.ul`
   color: white;
   display: flex;
   list-style: none;
+  padding: 0;
 
   @media (max-width: 425px) {
     margin-top: 20px;
@@ -31,4 +32,22 @@ export const LinksPage = styled.li`
     padding: 10px;
     font-size: 12px;
   }
+`;
+
+export const LinksWrapper = styled(Links)`
+  backdrop-filter: blur(40px);
+  padding: 8px;
+  display: flex;
+  width: 368px;
+  height: 56px;
+  justify-content: space-between;
+`;
+
+export const LinksBtn = styled(LinksPage)`
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #7b6ef6;
+  height: 40px;
+  border-radius: 8px;
 `;
