@@ -13,19 +13,24 @@ import {
   TitleDescription,
   TitleWrapper,
   GroupLinks,
-  PurpleLink,
+  AllMovies,
+  AllMoviesTitle,
+  AllMoviesTitleDes,
+  CardMoviesWrapper,
+  CardMovies,
 } from "./movies-page.styled";
 
 import useMoviesPage from "./use-movies-page";
 import { LinksWrapper, LinksBtn } from "../navbar/navbar.styled";
 import SearchIcon from "../../../assets/images/icons/search-normal.png";
+import BlackWidow from "../../../assets/images/poster/Black-Widow-Box-Office.png";
 
 const MoviesPage = () => {
   const { handleOnSubmit } = useMoviesPage();
   return (
     <MoviesPageWrapper>
       <Row>
-        <Column xl={8}>
+        <Column xl={7}>
           <TitleWrapper>
             <Title>MaileHereko</Title>
             <TitleDescription>
@@ -52,19 +57,34 @@ const MoviesPage = () => {
             <GroupLinks>
               <LinksWrapper>
                 <LinksBtn>
-                  <Link href="/all" passHref legacyBehavior>
-                    <PurpleLink key="primary">All</PurpleLink>
-                  </Link>
+                  All
+                  <Link href="/all"></Link>
                 </LinksBtn>
                 <LinksBtn>
-                  <Link href="/movies">Movies</Link>
+                  Movies
+                  <Link href="/movies"></Link>
                 </LinksBtn>
                 <LinksBtn>
-                  <Link href="/tv-shows">TV Shows</Link>
+                  TV Shows
+                  <Link href="/tv-shows"></Link>
                 </LinksBtn>
               </LinksWrapper>
             </GroupLinks>
+            <AllMovies>
+              <AllMoviesTitle>All</AllMoviesTitle>
+              <AllMoviesTitleDes>(120)</AllMoviesTitleDes>
+            </AllMovies>
           </TitleWrapper>
+        </Column>
+        <Column xl={12}>
+          <CardMoviesWrapper>
+            <CardMovies>
+              <Image src={BlackWidow} alt="blackWidow" />
+            </CardMovies>
+            <CardMovies></CardMovies>
+            <CardMovies></CardMovies>
+            <CardMovies></CardMovies>
+          </CardMoviesWrapper>
         </Column>
       </Row>
     </MoviesPageWrapper>

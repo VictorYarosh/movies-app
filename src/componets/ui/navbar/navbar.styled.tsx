@@ -35,18 +35,20 @@ export const LinksPage = styled.li`
 `;
 
 export const LinksWrapper = styled(Links)`
-  backdrop-filter: blur(40px);
-  padding: 8px;
   display: flex;
-  width: 368px;
-  height: 56px;
   justify-content: space-between;
+  padding: 8px;
+
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
 `;
 
 export const LinksBtn = styled(LinksPage)`
   display: flex;
   text-align: center;
   align-items: center;
+
   background-color: #7b6ef6;
   height: 40px;
   border-radius: 8px;
