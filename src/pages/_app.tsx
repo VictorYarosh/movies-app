@@ -5,11 +5,11 @@ import GlobalStyle from "../componets/globalstyles";
 const theme: DefaultTheme = {
   colors: {
     primary: "#5A4AF4",
-    secondary: "#1EA5FC",
+    secondary: "#EBE9FE",
   },
 };
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -18,4 +18,5 @@ export default function App({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </>
   );
-}
+};
+export default App;
