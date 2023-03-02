@@ -19,6 +19,8 @@ import {
   CardMoviesWrapper,
   CardMovies,
   LinksBtnCarousel,
+  CardMoviesTitle,
+  CardMoviesImage,
 } from "./movies-page.styled";
 
 import useMoviesPage from "./use-movies-page";
@@ -79,43 +81,46 @@ const MoviesPage: FC<ButtonProps> = ({ primary }) => {
             </AllMovies>
           </TitleWrapper>
         </Column>
-        <Column xl={12}>
-          <CardMoviesWrapper>
-            <CardMovies>
-              <Image
-                src={BlackWidow}
-                alt="Black-Widow"
-                width={270}
-                height={400}
-              />
-            </CardMovies>
-            <CardMovies>
-              <Image
-                src={BlackWidow}
-                alt="Black-Widow"
-                width={270}
-                height={400}
-              />
-            </CardMovies>
-            <CardMovies>
-              <Image
-                src={BlackWidow}
-                alt="Black-Widow"
-                width={270}
-                height={400}
-              />
-            </CardMovies>
-            <CardMovies>
-              <Image
-                src={BlackWidow}
-                alt="Black-Widow"
-                width={270}
-                height={400}
-              />
-            </CardMovies>
-          </CardMoviesWrapper>
-        </Column>
       </Row>
+      <CardMoviesWrapper>
+        <CardMovies>
+          <CardMoviesImage
+            src={BlackWidow}
+            alt="Black-Widow"
+            width={250}
+            height={400}
+          />
+          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
+        </CardMovies>
+        <CardMovies>
+          <CardMoviesImage
+            src={BlackWidow}
+            alt="Black-Widow"
+            width={250}
+            height={400}
+          />
+
+          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
+        </CardMovies>
+        <CardMovies>
+          <CardMoviesImage
+            src={BlackWidow}
+            alt="Black-Widow"
+            width={250}
+            height={400}
+          />
+          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
+        </CardMovies>
+        <CardMovies>
+          <CardMoviesImage
+            src={BlackWidow}
+            alt="Black-Widow"
+            width={250}
+            height={400}
+          />
+          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
+        </CardMovies>
+      </CardMoviesWrapper>
     </MoviesPageWrapper>
   );
 };

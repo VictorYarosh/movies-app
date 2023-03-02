@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { Container, Col } from "styled-bootstrap-grid";
-// import bg from "../../../assets/images/Background.png";
+import Image from "next/image";
+// import bg from "../../../assets/images/background.png";
 
 export const MoviesPageWrapper = styled(Container)`
   display: flex;
+  flex-direction: column;
   padding-top: 50px;
 `;
 
@@ -105,11 +107,27 @@ export const AllMoviesTitleDes = styled.p`
 export const CardMoviesWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 80px;
 `;
+
 export const CardMovies = styled.div`
   background: rgba(32, 40, 62, 0.8);
-  backdrop-filter: blur(40px);
   border-radius: 12px;
-  padding: 8px 8px 72px 8px;
-  margin: 0 12px 0 0;
+  padding: 8px 8px 25px 8px;
+
+  > * {
+    &:nth-last-child {
+      margin-right: 24px;
+    }
+  }
+`;
+export const CardMoviesImage = styled(Image)`
+  border-radius: 12px;
+`;
+export const CardMoviesTitle = styled.p`
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  background: none;
 `;
