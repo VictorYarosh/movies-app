@@ -1,10 +1,9 @@
-import React, { FC } from "react";
+import React, { FC, PropsWithChildren } from "react";
 
-import { LayoutProps } from "./types";
 import { LayoutStyled } from "./layout.styled";
 import Navbar from "../../ui/navbar";
 
-export const Layout: FC<LayoutProps> = ({ children }) => (
+export const Layout: FC<PropsWithChildren> = ({ children }) => (
   <LayoutStyled>
     <Navbar />
     {children}

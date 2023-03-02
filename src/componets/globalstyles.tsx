@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
   * {
     box-sizing: border-box;
-    background: #121829;
+    background-color: #121829;
   }
 `;
 

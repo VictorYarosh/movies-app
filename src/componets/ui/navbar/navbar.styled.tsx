@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import { Container } from "styled-bootstrap-grid";
 
-export const Navbar = styled.nav`
+export const Navbar = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
-  //background: rgba(18, 24, 41, 0.8);
   backdrop-filter: blur(20px);
 `;
 
@@ -13,6 +13,8 @@ export const Links = styled.ul`
   color: white;
   display: flex;
   list-style: none;
+  padding: 0;
+
   @media (max-width: 425px) {
     margin-top: 20px;
     font-size: 15px;
@@ -30,4 +32,23 @@ export const LinksPage = styled.li`
     padding: 10px;
     font-size: 12px;
   }
+`;
+
+export const LinksWrapper = styled(Links)`
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+`;
+
+export const LinksBtn = styled.li`
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  height: 40px;
+  border-radius: 8px;
 `;
