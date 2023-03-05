@@ -19,12 +19,12 @@ const MoviesCards: FC<MoviesCardsProps> = ({ movie, index }) => {
       <CardMoviesWrapper>
         <CardMovies>
           <CardMoviesImage
-            src={BlackWidow}
+            src={data.results.backdrop_path}
             alt="Black-Widow"
             width={250}
             height={400}
           />
-          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
+          <CardMoviesTitle>{data.title}</CardMoviesTitle>
         </CardMovies>
         <CardMovies>
           <CardMoviesImage

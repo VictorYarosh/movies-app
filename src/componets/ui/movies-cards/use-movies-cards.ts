@@ -3,9 +3,10 @@ import axios from "axios";
 import { MoviesCardsProps } from "./types";
 
 import { api } from "../../../const";
+import { moviesAll } from "./const";
 
 const useMoviesCards = ({ movie, index }: MoviesCardsProps) => {
-  const [data, setData] = useState();
+  const [data, setData] = useState(moviesAll);
   const [isLoading, setLoading] = useState(true);
   // const { movies, setMovies } = useState(CardsContext);
 
