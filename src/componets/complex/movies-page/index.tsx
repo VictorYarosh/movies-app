@@ -1,14 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Row } from "styled-bootstrap-grid";
-import { Form, Text } from "react-uforms";
 
 import {
   Column,
   MoviesPageWrapper,
-  SearchIconWrapper,
-  SearchInput,
   Title,
   TitleDescription,
   TitleWrapper,
@@ -16,21 +12,18 @@ import {
   AllMovies,
   AllMoviesTitle,
   AllMoviesTitleDes,
-  CardMoviesWrapper,
-  CardMovies,
   LinksBtnCarousel,
-  CardMoviesTitle,
-  CardMoviesImage,
 } from "./movies-page.styled";
 
-import useMoviesPage from "./use-movies-page";
-import { LinksWrapper, LinksBtn } from "../../ui/navbar/navbar.styled";
-import SearchIcon from "../../../assets/images/icons/search-normal.png";
-import BlackWidow from "../../../assets/images/poster/Black-Widow-Box-Office.png";
-import { ButtonProps } from "./types";
+import { CardsContext, MoviesPage } from "./cards-context";
 
-const MoviesPage: FC<ButtonProps> = ({ primary }) => {
-  const { handleOnSubmit } = useMoviesPage();
+import { LinksWrapper, LinksBtn } from "../../ui/navbar/navbar.styled";
+import MovieCards from "../../ui/movies-cards";
+import Search from "../../ui/search";
+
+const MoviesPage: FC<MoviesPage> = ({ primary }) => {
+  const [movies, setMovies] = useState<string[]>([""]);
+
   return (
     <MoviesPageWrapper>
       <Row>
@@ -42,21 +35,7 @@ const MoviesPage: FC<ButtonProps> = ({ primary }) => {
               date. Explore what I have watched and also feel free to make a
               suggestion. 😉
             </TitleDescription>
-            <SearchInput>
-              <Form onSubmit={handleOnSubmit}>
-                <button type="submit">
-                  <SearchIconWrapper>
-                    <Image src={SearchIcon} alt="searchIcon" />
-                  </SearchIconWrapper>
-                </button>
-                <Text
-                  type="text"
-                  name="search"
-                  id="search"
-                  placeholder="Search MoviesList or TV Shows"
-                />
-              </Form>
-            </SearchInput>
+            <Search />
 
             <GroupLinks>
               <LinksWrapper>
@@ -82,45 +61,13 @@ const MoviesPage: FC<ButtonProps> = ({ primary }) => {
           </TitleWrapper>
         </Column>
       </Row>
-      <CardMoviesWrapper>
-        <CardMovies>
-          <CardMoviesImage
-            src={BlackWidow}
-            alt="Black-Widow"
-            width={250}
-            height={400}
-          />
-          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
-        </CardMovies>
-        <CardMovies>
-          <CardMoviesImage
-            src={BlackWidow}
-            alt="Black-Widow"
-            width={250}
-            height={400}
-          />
-
-          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
-        </CardMovies>
-        <CardMovies>
-          <CardMoviesImage
-            src={BlackWidow}
-            alt="Black-Widow"
-            width={250}
-            height={400}
-          />
-          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
-        </CardMovies>
-        <CardMovies>
-          <CardMoviesImage
-            src={BlackWidow}
-            alt="Black-Widow"
-            width={250}
-            height={400}
-          />
-          <CardMoviesTitle>Black-Widow</CardMoviesTitle>
-        </CardMovies>
-      </CardMoviesWrapper>
+      <CardsContext.Provider value={{ movies, setMovies }}>
+        {movies.map((movie, index) => {
+          return (
+            <MovieCards key={`${movie}-${index}`} movie={movie} index={index} />
+          );
+        })}
+      </CardsContext.Provider>
     </MoviesPageWrapper>
   );
 };
