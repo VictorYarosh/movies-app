@@ -10,7 +10,6 @@ export const CardMoviesWrapper = styled.div`
 export const CardMovies = styled.div`
   background: rgba(32, 40, 62, 0.8);
   border-radius: 12px;
-  padding: 8px 8px 25px 8px;
 
   > * {
     &:nth-last-child {

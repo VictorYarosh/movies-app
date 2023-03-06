@@ -18,7 +18,6 @@ const useMoviesCards = ({ movie, index }: MoviesCardsProps) => {
         );
 
         setData(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error(error);
       }
