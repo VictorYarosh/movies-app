@@ -1,4 +1,7 @@
 const useMoviesPage = () => {
-  return;
+  const movies = [{ name: "hell" }];
+  return {
+    props: { movies },
+  };
 };
 export default useMoviesPage;

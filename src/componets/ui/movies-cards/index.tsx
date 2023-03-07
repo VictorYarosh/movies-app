@@ -8,12 +8,11 @@ import {
 } from "../movies-cards/movies-page.styled";
 
 import useMoviesCards from "./use-movies-cards";
-import { MoviesCardsProps } from "./types";
 
 import BlackWidow from "../../../assets/images/poster/Black-Widow-Box-Office.png";
 
-const MoviesCards: FC<MoviesCardsProps> = ({ movie, index }) => {
-  const { isLoading, data } = useMoviesCards({ movie, index });
+const MoviesCards: FC = () => {
+  const { data } = useMoviesCards();
   return (
     <CardMoviesWrapper>
       <CardMovies>

@@ -4,6 +4,6 @@ export interface MoviesProps {
 }
 
 export interface MoviesCardsProps {
-  movie: string;
-  index: number;
+  movies: string;
+  setMovies: (value: string[]) => void;
 }

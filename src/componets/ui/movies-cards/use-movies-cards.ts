@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { MoviesCardsProps } from "./types";
 
-import { api } from "../../../const";
 import { moviesAll } from "./const";
 
-const useMoviesCards = ({ movie, index }: MoviesCardsProps) => {
+import { api } from "../../../const";
+
+const useMoviesCards = () => {
   const [data, setData] = useState(moviesAll);
+
   const [isLoading, setLoading] = useState(true);
-  // const { movies, setMovies } = useState(CardsContext);
 
   useEffect(() => {
     const getMoviesAll = async () => {
@@ -16,8 +16,8 @@ const useMoviesCards = ({ movie, index }: MoviesCardsProps) => {
         const response = await axios.get(
           `${api.base}popular?api_key=${api.key}&language=en-US`
         );
-
         setData(response.data);
+        console.log(data);
       } catch (error) {
         console.error(error);
       }

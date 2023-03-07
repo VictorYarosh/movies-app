@@ -5,7 +5,3 @@ export const CardsContext = createContext<MoviesProps>({
   movies: [],
   setMovies: () => null,
 });
-
-export interface MoviesPage {
-  primary: any;
-}
