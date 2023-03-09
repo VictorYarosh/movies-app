@@ -1,7 +1,7 @@
+import { useState } from "react";
+
 const useMoviesPage = () => {
-  const movies = [{ name: "hell" }];
-  return {
-    props: { movies },
-  };
+  const [movies, setMovies] = useState();
+  return;
 };
 export default useMoviesPage;

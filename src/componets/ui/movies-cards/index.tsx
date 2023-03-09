@@ -1,18 +1,16 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import {
   CardMovies,
   CardMoviesImage,
   CardMoviesTitle,
   CardMoviesWrapper,
-} from "../movies-cards/movies-page.styled";
+} from "./movies-page.styled";
 
 import useMoviesCards from "./use-movies-cards";
 
-import BlackWidow from "../../../assets/images/poster/Black-Widow-Box-Office.png";
-
 const MoviesCards: FC = () => {
-  const { data } = useMoviesCards();
+  const { movie } = useMoviesCards();
   return (
     <CardMoviesWrapper>
       <CardMovies>
@@ -20,38 +18,9 @@ const MoviesCards: FC = () => {
           alt="Black-Widow"
           width={250}
           height={400}
-          src={`https://image.tmdb.org/t/p/w500${data.results.backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/w500${movie.results[0].poster_path}`}
         />
-
-        <CardMoviesTitle>{data.title}</CardMoviesTitle>
-      </CardMovies>
-      <CardMovies>
-        <CardMoviesImage
-          src={BlackWidow}
-          alt="Black-Widow"
-          width={250}
-          height={400}
-        />
-
-        <CardMoviesTitle>Black-Widow</CardMoviesTitle>
-      </CardMovies>
-      <CardMovies>
-        <CardMoviesImage
-          src={BlackWidow}
-          alt="Black-Widow"
-          width={250}
-          height={400}
-        />
-        <CardMoviesTitle>Black-Widow</CardMoviesTitle>
-      </CardMovies>
-      <CardMovies>
-        <CardMoviesImage
-          src={BlackWidow}
-          alt="Black-Widow"
-          width={250}
-          height={400}
-        />
-        <CardMoviesTitle>Black-Widow</CardMoviesTitle>
+        <CardMoviesTitle>{movie.results[0].original_title}</CardMoviesTitle>
       </CardMovies>
     </CardMoviesWrapper>
   );

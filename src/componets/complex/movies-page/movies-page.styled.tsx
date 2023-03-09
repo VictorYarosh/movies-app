@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Container, Col } from "styled-bootstrap-grid";
-
-// import bg from "../../../assets/images/background.png";
+import { Container } from "styled-bootstrap-grid";
 
 export const MoviesPageWrapper = styled(Container)`
   display: flex;

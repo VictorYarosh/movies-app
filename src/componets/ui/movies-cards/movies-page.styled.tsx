@@ -18,9 +18,11 @@ export const CardMovies = styled.div`
   }
 `;
 export const CardMoviesImage = styled(Image)`
+  margin: 8px;
   border-radius: 12px;
 `;
 export const CardMoviesTitle = styled.p`
+  margin: 7px 0 15px 8px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;

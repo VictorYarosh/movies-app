@@ -29,7 +29,9 @@ const ContentTitle = () => {
               date. Explore what I have watched and also feel free to make a
               suggestion. 😉
             </TitleDescription>
+
             <Search />
+
             <GroupLinks>
               <LinksWrapper>
                 <LinksBtnCarousel>
