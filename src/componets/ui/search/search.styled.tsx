@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SearchInput = styled.div`
-  width: 55%;
+  width: 35%;
   padding-bottom: 50px;
 
   form {
@@ -21,7 +21,7 @@ export const SearchInput = styled.div`
   input {
     width: 100%;
     height: 64px;
-    padding: 0 65px;
+    padding: 0 0 0 65px;
     border: none;
     color: white;
     border-radius: 10px;

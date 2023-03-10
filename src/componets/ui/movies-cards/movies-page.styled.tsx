@@ -1,6 +1,39 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+export const GroupLinks = styled.div`
+  width: 35%;
+`;
+
+export const LinksBtnCarousel = styled.li`
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.secondary};
+  background: ${(props) => (props ? "#7B6EF6" : "white")};
+  border-radius: 8px;
+  padding: 0 40px;
+`;
+export const AllMovies = styled.div`
+  display: flex;
+  color: #767e94;
+  letter-spacing: -0.02em;
+`;
+export const AllMoviesTitle = styled.p`
+  font-weight: 600;
+  font-size: 32px;
+`;
+
+export const AllMoviesTitleDes = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding: 20px 5px;
+  font-weight: 400;
+  font-size: 18px;
+`;
+
 export const CardMoviesWrapper = styled.div`
   display: flex;
   justify-content: space-between;

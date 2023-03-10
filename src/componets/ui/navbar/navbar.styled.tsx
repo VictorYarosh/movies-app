@@ -51,4 +51,5 @@ export const LinksBtn = styled.li`
 
   height: 40px;
   border-radius: 8px;
+  padding: 0 20px;
 `;

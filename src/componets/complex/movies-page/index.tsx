@@ -9,6 +9,7 @@ const MoviesPage: FC = () => {
   return (
     <MoviesPageWrapper>
       <ContentTitle />
+
       <MoviesCards />
     </MoviesPageWrapper>
   );

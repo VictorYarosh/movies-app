@@ -6,7 +6,7 @@ import { moviesAll } from "./const";
 import { api } from "../../../const";
 
 const useMoviesCards = () => {
-  const [movie, setMovie] = useState(moviesAll);
+  const [data, setData] = useState(moviesAll);
 
   const [isLoading, setLoading] = useState(true);
 
@@ -16,7 +16,7 @@ const useMoviesCards = () => {
         const response = await axios.get(
           `${api.base}popular?api_key=${api.key}&language=en-US&page=1`
         );
-        setMovie(response.data);
+        setData(response.data);
         console.log(response.data);
       } catch (error) {
         console.error(error);
@@ -28,9 +28,18 @@ const useMoviesCards = () => {
     });
   }, []);
 
+  const filteredMovie = () => {
+    const filteredMovies = data.results.map((array) => {
+      return array;
+    });
+    setData(filteredMovies);
+  };
+
   return {
-    movie,
+    data,
     isLoading,
+
+    filteredMovie,
   };
 };
 
