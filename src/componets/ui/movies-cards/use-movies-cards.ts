@@ -28,18 +28,20 @@ const useMoviesCards = () => {
     });
   }, []);
 
-  const filteredMovie = () => {
-    const filteredMovies = data.results.map((array) => {
-      return array;
+  const filterMovies = () => {
+    let movies = {};
+    data.results.map(({ id, ...res }) => {
+      movies = { ...movies, [id]: { ...res } };
     });
-    setData(filteredMovies);
   };
 
+  const handleOnSubmit = () => {};
   return {
     data,
     isLoading,
 
-    filteredMovie,
+    handleOnSubmit,
+    filterMovies,
   };
 };
 

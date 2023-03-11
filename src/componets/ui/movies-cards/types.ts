@@ -4,6 +4,5 @@ export interface MoviesProps {
 }
 
 export interface MoviesCardsProps {
-  index: number;
-  movie: string;
+  id: number;
 }

@@ -14,33 +14,12 @@ import {
 } from "./movies-page.styled";
 
 import useMoviesCards from "./use-movies-cards";
-
-import Search from "../search";
-import { LinksBtn, LinksWrapper } from "../navbar/navbar.styled";
+import { MoviesCardsProps } from "./types";
 
 const MoviesCards: FC = () => {
-  const { data } = useMoviesCards();
+  const { data, isLoading, handleOnSubmit, filterMovies } = useMoviesCards();
   return (
     <>
-      <Search />
-
-      <GroupLinks>
-        <LinksWrapper>
-          <LinksBtnCarousel>
-            All
-            <Link href="/"></Link>
-          </LinksBtnCarousel>
-          <LinksBtn>
-            MoviesList
-            <Link href="/"></Link>
-          </LinksBtn>
-          <LinksBtn>
-            TV Shows
-            <Link href="/"></Link>
-          </LinksBtn>
-        </LinksWrapper>
-      </GroupLinks>
-
       <AllMovies>
         <AllMoviesTitle>All</AllMoviesTitle>
         <AllMoviesTitleDes>(120)</AllMoviesTitleDes>
