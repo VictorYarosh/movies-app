@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import { moviesAll } from "./const";
-
 import { api } from "../../../const";
+import { MoviesProps } from "./types";
 
 const useMoviesCards = () => {
-  const [data, setData] = useState(moviesAll);
+  const [data, setData] = useState<MoviesProps>(null);
 
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     const getMoviesAll = async () => {
       try {
-        const response = await axios.get(
+        const response = await axios.get<MoviesProps>(
           `${api.base}popular?api_key=${api.key}&language=en-US&page=1`
         );
         setData(response.data);

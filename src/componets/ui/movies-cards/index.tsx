@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import Link from "next/link";
 
 import {
   CardMovies,
@@ -9,12 +8,9 @@ import {
   AllMovies,
   AllMoviesTitle,
   AllMoviesTitleDes,
-  GroupLinks,
-  LinksBtnCarousel,
 } from "./movies-page.styled";
 
 import useMoviesCards from "./use-movies-cards";
-import { MoviesCardsProps } from "./types";
 
 const MoviesCards: FC = () => {
   const { data, isLoading, handleOnSubmit, filterMovies } = useMoviesCards();
@@ -31,9 +27,9 @@ const MoviesCards: FC = () => {
             alt=""
             width={250}
             height={400}
-            src={`https://image.tmdb.org/t/p/w500${data.results[0].poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500${filterMovies}`}
           />
-          <CardMoviesTitle>{data.results[0].original_title}</CardMoviesTitle>
+          <CardMoviesTitle></CardMoviesTitle>
         </CardMovies>
       </CardMoviesWrapper>
     </>
