@@ -27,7 +27,7 @@ const MoviesCards: FC = () => {
             alt=""
             width={250}
             height={400}
-            src={`https://image.tmdb.org/t/p/w500${filterMovies}`}
+            src={`https://image.tmdb.org/t/p/w500${data.results}`}
           />
           <CardMoviesTitle></CardMoviesTitle>
         </CardMovies>
