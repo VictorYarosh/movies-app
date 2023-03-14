@@ -12,8 +12,8 @@ import {
 
 import useMoviesCards from "./use-movies-cards";
 
-const MoviesCards: FC = () => {
-  const { data, isLoading, handleOnSubmit, filterMovies } = useMoviesCards();
+export const MoviesCards: FC = () => {
+  const { data, isLoading, handleOnSubmit } = useMoviesCards();
   return (
     <>
       <AllMovies>
@@ -27,12 +27,12 @@ const MoviesCards: FC = () => {
             alt=""
             width={250}
             height={400}
-            src={`https://image.tmdb.org/t/p/w500${data.results}`}
+            src={`https://image.tmdb.org/t/p/w500${data.results[0].poster_path}`}
           />
-          <CardMoviesTitle></CardMoviesTitle>
+
+          <CardMoviesTitle>{data.results[0].title}</CardMoviesTitle>
         </CardMovies>
       </CardMoviesWrapper>
     </>
   );
 };
-export default MoviesCards;

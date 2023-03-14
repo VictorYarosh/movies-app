@@ -8,7 +8,7 @@ import {
   TitleWrapper,
 } from "../../ui/content-title/content-title.styled";
 
-const ContentTitle = () => {
+export const ContentTitle = () => {
   return (
     <>
       <Row>
@@ -26,5 +26,3 @@ const ContentTitle = () => {
     </>
   );
 };
-
-export default ContentTitle;

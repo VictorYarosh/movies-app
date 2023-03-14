@@ -5,7 +5,7 @@ import { api } from "../../../const";
 import { MoviesProps } from "./types";
 
 const useMoviesCards = () => {
-  const [data, setData] = useState<MoviesProps>(null);
+  const [data, setData] = useState<MoviesProps | null>(null);
 
   const [isLoading, setLoading] = useState(true);
 
@@ -27,9 +27,11 @@ const useMoviesCards = () => {
 
   const filterMovies = () => {
     let movies = {};
-    data.results.map(({ id, ...res }) => {
-      movies = { ...movies, [id]: { ...res } };
-    });
+    if (data?.results) {
+      data.results.map(({ id, ...res }) => {
+        movies = { ...movies, [id]: { ...res } };
+      });
+    }
   };
 
   const handleOnSubmit = () => {};
