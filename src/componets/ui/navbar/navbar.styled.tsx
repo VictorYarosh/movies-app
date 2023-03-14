@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Container } from "styled-bootstrap-grid";
+import { Container } from 'styled-bootstrap-grid';
+import styled from 'styled-components';
 
 export const Navbar = styled(Container)`
   display: flex;

@@ -1,19 +1,18 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
 import {
+  AllMovies,
+  AllMoviesTitle,
+  AllMoviesTitleDes,
   CardMovies,
   CardMoviesImage,
   CardMoviesTitle,
   CardMoviesWrapper,
-  AllMovies,
-  AllMoviesTitle,
-  AllMoviesTitleDes,
-} from "./movies-page.styled";
-
-import useMoviesCards from "./use-movies-cards";
+} from './movies-page.styled';
+import useMoviesCards from './use-movies-cards';
 
 export const MoviesCards: FC = () => {
-  const { data, isLoading, handleOnSubmit } = useMoviesCards();
+  const { data } = useMoviesCards();
   return (
     <>
       <AllMovies>
@@ -27,10 +26,10 @@ export const MoviesCards: FC = () => {
             alt=""
             width={250}
             height={400}
-            src={`https://image.tmdb.org/t/p/w500${data.results[0].poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500${data?.results[0].poster_path}`}
           />
 
-          <CardMoviesTitle>{data.results[0].title}</CardMoviesTitle>
+          <CardMoviesTitle>{data?.results[0].original_title}</CardMoviesTitle>
         </CardMovies>
       </CardMoviesWrapper>
     </>

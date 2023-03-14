@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Image from "next/image";
+import Image from 'next/image';
+import styled from 'styled-components';
 
 export const GroupLinks = styled.div`
   width: 35%;
@@ -10,7 +10,7 @@ export const LinksBtnCarousel = styled.li`
   font-size: 16px;
   align-items: center;
   color: ${({ theme }) => theme.colors.secondary};
-  background: ${(props) => (props ? "#7B6EF6" : "white")};
+  // background: ${(props) => (props ? '#7B6EF6' : 'white')};
   border-radius: 8px;
   padding: 0 40px;
 `;

@@ -1,5 +1,5 @@
-import { Layout } from "../componets/containers/layout";
-import MoviesPage from "../componets/complex/movies-page";
+import MoviesPage from '../componets/complex/movies-page';
+import { Layout } from '../componets/containers/layout';
 
 const MoviesList = () => {
   return (

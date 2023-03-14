@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Col } from "styled-bootstrap-grid";
+import { Col } from 'styled-bootstrap-grid';
+import styled from 'styled-components';
 
 export const Column = styled(Col)`
   display: flex;
@@ -23,4 +23,3 @@ export const TitleDescription = styled.p`
   line-height: 24px;
   padding: 0 0 14px 0;
 `;
-
