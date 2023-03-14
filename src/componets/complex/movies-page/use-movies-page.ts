@@ -1,7 +1,6 @@
+import { useState } from "react";
+
 const useMoviesPage = () => {
-  const handleOnSubmit = () => {};
-  return {
-    handleOnSubmit,
-  };
+  return;
 };
 export default useMoviesPage;

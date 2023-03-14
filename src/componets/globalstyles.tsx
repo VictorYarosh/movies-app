@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+// import bg from "../assets/images/Background.svg";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -19,4 +20,5 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+//background-image: url(${bg.src});
 export default GlobalStyle;
