@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { api } from '../../../const';
+import { api } from '../movies-cards/const';
 
 const useSearch = () => {
   const handleOnSubmit = async ({ values }: any) => {

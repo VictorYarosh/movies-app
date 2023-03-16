@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const SearchInput = styled.div`
-  width: 35%;
   padding-bottom: 50px;
 
   form {

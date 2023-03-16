@@ -1,9 +1,4 @@
-import { Col } from 'styled-bootstrap-grid';
 import styled from 'styled-components';
-
-export const Column = styled(Col)`
-  display: flex;
-`;
 
 export const TitleWrapper = styled.div`
   display: flex;
@@ -13,7 +8,6 @@ export const Title = styled.h1`
   color: #ebeef5;
   font-weight: 600;
   font-size: 64px;
-  line-height: 80px;
 `;
 
 export const TitleDescription = styled.p`
