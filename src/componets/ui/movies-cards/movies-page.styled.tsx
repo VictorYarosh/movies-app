@@ -42,7 +42,7 @@ export const CardAverageWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px 8px;
+  padding: 5px 10px;
   gap: 4px;
   position: absolute;
   margin: 18px 16px;
@@ -50,6 +50,7 @@ export const CardAverageWrapper = styled.div`
 
 export const CardAverageStar = styled.div`
   color: #ffad49;
+  margin: 0 5px;
 `;
 
 export const CardAverage = styled.p`
@@ -57,6 +58,7 @@ export const CardAverage = styled.p`
   font-size: 16px;
   line-height: 24px;
   color: #ffad49;
+  margin: 10px;
 `;
 
 export const CardMoviesWrapper = styled.div`
@@ -80,10 +82,10 @@ export const CardMoviesImage = styled(Image)`
   border-radius: 12px;
 `;
 export const CardMoviesTitle = styled.p`
-  margin: 7px 0 15px 8px;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 14px;
   line-height: 24px;
   color: white;
   background: none;
+  margin: 15px;
 `;

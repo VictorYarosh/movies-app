@@ -42,6 +42,7 @@ export const LinksWrapper = styled(Links)`
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(40px);
   border-radius: 12px;
+  margin-right: -10px;
 `;
 
 export const LinksBtn = styled.li`

@@ -1,4 +1,4 @@
-const useMoviesPage = () => {
+const useAllPageMovies = () => {
   return;
 };
-export default useMoviesPage;
+export default useAllPageMovies;
