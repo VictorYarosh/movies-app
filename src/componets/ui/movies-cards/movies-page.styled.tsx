@@ -1,16 +1,17 @@
-import styled from "styled-components";
-import Image from "next/image";
+import Image from 'next/image';
+import styled from 'styled-components';
 
-export const GroupLinks = styled.div`
-  width: 35%;
-`;
+export const Lodiang = styled.div``;
+
+export const GroupLinks = styled.div``;
+export const WrapperMovies = styled.div``;
 
 export const LinksBtnCarousel = styled.li`
   display: flex;
   font-size: 16px;
   align-items: center;
   color: ${({ theme }) => theme.colors.secondary};
-  background: ${(props) => (props ? "#7B6EF6" : "white")};
+  background: ${(props) => (props ? '#7B6EF6' : 'white')};
   border-radius: 8px;
   padding: 0 40px;
 `;
@@ -32,6 +33,30 @@ export const AllMoviesTitleDes = styled.p`
   padding: 20px 5px;
   font-weight: 400;
   font-size: 18px;
+`;
+
+export const CardAverageWrapper = styled.div`
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+  position: absolute;
+  margin: 18px 16px;
+`;
+
+export const CardAverageStar = styled.div`
+  color: #ffad49;
+`;
+
+export const CardAverage = styled.p`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffad49;
 `;
 
 export const CardMoviesWrapper = styled.div`

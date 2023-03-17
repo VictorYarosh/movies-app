@@ -1,9 +1,4 @@
-import styled from "styled-components";
-import { Col } from "styled-bootstrap-grid";
-
-export const Column = styled(Col)`
-  display: flex;
-`;
+import styled from 'styled-components';
 
 export const TitleWrapper = styled.div`
   display: flex;
@@ -13,7 +8,6 @@ export const Title = styled.h1`
   color: #ebeef5;
   font-weight: 600;
   font-size: 64px;
-  line-height: 80px;
 `;
 
 export const TitleDescription = styled.p`
@@ -23,4 +17,3 @@ export const TitleDescription = styled.p`
   line-height: 24px;
   padding: 0 0 14px 0;
 `;
-

@@ -1,5 +1,4 @@
-import { createGlobalStyle } from "styled-components";
-// import bg from "../assets/images/Background.svg";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -16,9 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
   * {
     box-sizing: border-box;
-    background-color: #121829;
   }
 `;
 
-//background-image: url(${bg.src});
 export default GlobalStyle;

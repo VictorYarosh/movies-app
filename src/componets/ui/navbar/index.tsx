@@ -1,10 +1,9 @@
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
-import Image from "next/image";
-import { Links, LinksPage, Navbar } from "./navbar.styled";
-import Logo from "../logo";
-
-import ArrowNavbar from "../../../assets/images/icons/arrow-right.png";
+import ArrowNavbar from '../../../assets/images/icons/arrow-right.png';
+import Logo from '../logo';
+import { Links, LinksPage, Navbar } from './navbar.styled';
 
 const NavBar = () => {
   return (

@@ -1,17 +1,10 @@
-import React, { FC } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Form, Text } from "react-uforms";
+import Image from 'next/image';
+import React, { FC } from 'react';
+import { Form, Text } from 'react-uforms';
 
-import useSearch from "./use-search";
-import { SearchIconWrapper, SearchInput } from "../search/search.styled";
-
-import {
-  GroupLinks,
-  LinksBtnCarousel,
-} from "../movies-cards/movies-page.styled";
-import { LinksBtn, LinksWrapper } from "../navbar/navbar.styled";
-import SearchIcon from "../../../assets/images/icons/search-normal.png";
+import SearchIcon from '../../../assets/images/icons/search-normal.png';
+import { SearchIconWrapper, SearchInput } from './search.styled';
+import useSearch from './use-search';
 
 const Search: FC = () => {
   const { handleOnSubmit } = useSearch();
@@ -25,30 +18,9 @@ const Search: FC = () => {
               <Image src={SearchIcon} alt="searchIcon" />
             </SearchIconWrapper>
           </button>
-          <Text
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search MoviesList or TV Shows"
-          />
+          <Text type="text" name="search" id="search" placeholder="Search MoviesList or TV Shows" />
         </Form>
       </SearchInput>
-      <GroupLinks>
-        <LinksWrapper>
-          <LinksBtnCarousel>
-            All
-            <Link href="/"></Link>
-          </LinksBtnCarousel>
-          <LinksBtn>
-            MoviesList
-            <Link href="/"></Link>
-          </LinksBtn>
-          <LinksBtn>
-            TV Shows
-            <Link href="/"></Link>
-          </LinksBtn>
-        </LinksWrapper>
-      </GroupLinks>
     </>
   );
 };

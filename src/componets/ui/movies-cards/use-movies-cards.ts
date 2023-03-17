@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-import { api } from "../../../const";
-import { MoviesProps } from "./types";
+import { api } from './const';
+import { MoviesProps } from './types';
 
 const useMoviesCards = () => {
   const [data, setData] = useState<MoviesProps>(null);
@@ -27,12 +27,15 @@ const useMoviesCards = () => {
     });
   }, []);
 
-  const filterMovies = () => {
-    let movies = {};
-    data.results.map(({ id, ...res }) => {
-      movies = { ...movies, [id]: { ...res } };
-    });
-  };
+  // const filterMovies = () => {
+  //   let movies = {};
+  //   if (data?.results) {
+  //     data.results.map(({ id, ...res }) => {
+  //       movies = { ...movies, [id]: { ...res } };
+  //     });
+  //     return movies;
+  //   }
+  // };
 
   const handleOnSubmit = () => {};
   return {
@@ -40,7 +43,6 @@ const useMoviesCards = () => {
     isLoading,
 
     handleOnSubmit,
-    filterMovies,
   };
 };
 

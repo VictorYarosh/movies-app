@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
+import Image from 'next/image';
+import React from 'react';
 
-import { LogoContainer } from "./logo.styled";
-import LogoSrc from "../../../assets/images/logo.svg";
+import LogoSrc from '../../../assets/images/logo.svg';
+import { LogoContainer } from './logo.styled';
 
 const Logo = () => {
   return (

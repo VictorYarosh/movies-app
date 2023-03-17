@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchInput = styled.div`
-  width: 35%;
   padding-bottom: 50px;
 
   form {
@@ -11,7 +10,7 @@ export const SearchInput = styled.div`
   }
 
   button {
-    padding: 20px;
+    margin: 20px 10px;
     position: absolute;
     cursor: pointer;
     background: #121829;
