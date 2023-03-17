@@ -13,14 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
     "incremental": true,
     "strictNullChecks": false,
     "baseUrl": ".",
     "suppressImplicitAnyIndexErrors": true
-=======
-    "incremental": true
->>>>>>> main
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
