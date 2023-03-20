@@ -21,3 +21,5 @@ export const LoginTitle = styled.h1`
   letter-spacing: -0.02em;
   color: #c3c8d4;
 `;
+
+export const InputContainer = styled.input``;

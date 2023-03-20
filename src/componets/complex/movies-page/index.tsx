@@ -3,7 +3,13 @@ import React, { FC } from 'react';
 
 import { ContentTitle } from '../../ui/content-title';
 import { MoviesCards } from '../../ui/movies-cards';
-import { GroupLinks, LinksBtnCarousel } from '../../ui/movies-cards/movies-page.styled';
+import {
+  AllMovies,
+  AllMoviesTitle,
+  AllMoviesTitleDes,
+  GroupLinks,
+  LinksBtnCarousel,
+} from '../../ui/movies-cards/movies-page.styled';
 import { LinksBtn, LinksWrapper } from '../../ui/navbar/navbar.styled';
 import Search from '../../ui/search';
 import { Column, MoviesPageWrapper } from './movies-page.styled';
@@ -33,11 +39,13 @@ const AllPageMovies: FC = () => {
             </LinksBtn>
           </LinksWrapper>
         </GroupLinks>
+        <AllMovies>
+          <AllMoviesTitle>All</AllMoviesTitle>
+          <AllMoviesTitleDes></AllMoviesTitleDes>
+        </AllMovies>
       </Column>
 
-      <Column xl={12}>
-        <MoviesCards />
-      </Column>
+      <MoviesCards />
     </MoviesPageWrapper>
   );
 };
