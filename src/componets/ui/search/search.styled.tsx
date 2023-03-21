@@ -1,22 +1,16 @@
 import styled from 'styled-components';
 
+export const SearchButton = styled.button`
+  margin: 20px 10px;
+  position: absolute;
+  cursor: pointer;
+  background: #121829;
+  border: none;
+  border-radius: 12px;
+`;
 export const SearchInput = styled.div`
   padding-bottom: 50px;
 
-  form {
-    background: rgba(0, 0, 0, 0.1);
-    border: 2px solid #323b54;
-    border-radius: 12px;
-  }
-
-  button {
-    margin: 20px 10px;
-    position: absolute;
-    cursor: pointer;
-    background: #121829;
-    border: none;
-    border-radius: 12px;
-  }
   input {
     width: 100%;
     height: 64px;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-export const Lodiang = styled.div``;
+export const Loading = styled.div``;
 
 export const GroupLinks = styled.div``;
 export const WrapperMovies = styled.div``;
@@ -10,8 +10,6 @@ export const LinksBtnCarousel = styled.li`
   display: flex;
   font-size: 16px;
   align-items: center;
-  color: ${({ theme }) => theme.colors.secondary};
-  background: ${(props) => (props ? '#7B6EF6' : 'white')};
   border-radius: 8px;
   padding: 0 40px;
 `;
@@ -59,12 +57,6 @@ export const CardAverage = styled.p`
   line-height: 24px;
   color: #ffad49;
   margin: 10px;
-`;
-
-export const CardMoviesWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 80px;
 `;
 
 export const CardMovies = styled.div`

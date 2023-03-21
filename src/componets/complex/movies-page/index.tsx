@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
+import { Form } from 'react-uforms';
+import { Col, Row } from 'styled-bootstrap-grid';
 
 import { ContentTitle } from '../../ui/content-title';
 import { MoviesCards } from '../../ui/movies-cards';
@@ -12,41 +14,53 @@ import {
 } from '../../ui/movies-cards/movies-page.styled';
 import { LinksBtn, LinksWrapper } from '../../ui/navbar/navbar.styled';
 import Search from '../../ui/search';
-import { Column, MoviesPageWrapper } from './movies-page.styled';
+import { ColumnStyled } from './movies-page.styled';
+import useMoviesPage from './use-movies-page';
 
-const AllPageMovies: FC = () => {
+const MoviesPage: FC = () => {
+  const { handleOnSubmit } = useMoviesPage();
   return (
-    <MoviesPageWrapper>
-      <Column xl={8}>
-        <ContentTitle />
-      </Column>
+    <>
+      <Row>
+        <Col xl={8}>
+          <ColumnStyled>
+            <ContentTitle />
+          </ColumnStyled>
+        </Col>
 
-      <Column xl={5}>
-        <Search />
-        <GroupLinks>
-          <LinksWrapper>
-            <LinksBtnCarousel>
-              All
-              <Link href="/"></Link>
-            </LinksBtnCarousel>
-            <LinksBtn>
-              MoviesList
-              <Link href="/"></Link>
-            </LinksBtn>
-            <LinksBtn>
-              TV Shows
-              <Link href="/"></Link>
-            </LinksBtn>
-          </LinksWrapper>
-        </GroupLinks>
-        <AllMovies>
-          <AllMoviesTitle>All</AllMoviesTitle>
-          <AllMoviesTitleDes></AllMoviesTitleDes>
-        </AllMovies>
-      </Column>
+        <Col xl={5}>
+          <ColumnStyled>
+            <Form onSubmit={handleOnSubmit}>
+              <Search />
+            </Form>
+
+            <GroupLinks>
+              <LinksWrapper>
+                <LinksBtnCarousel>
+                  All
+                  <Link href="/"></Link>
+                </LinksBtnCarousel>
+                <LinksBtn>
+                  MoviesList
+                  <Link href="/"></Link>
+                </LinksBtn>
+                <LinksBtn>
+                  TV Shows
+                  <Link href="/"></Link>
+                </LinksBtn>
+              </LinksWrapper>
+            </GroupLinks>
+
+            <AllMovies>
+              <AllMoviesTitle>All</AllMoviesTitle>
+              <AllMoviesTitleDes></AllMoviesTitleDes>
+            </AllMovies>
+          </ColumnStyled>
+        </Col>
+      </Row>
 
       <MoviesCards />
-    </MoviesPageWrapper>
+    </>
   );
 };
-export default AllPageMovies;
+export default MoviesPage;
