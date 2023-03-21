@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import MoviesList from './movies-list';
+import Auth from './auth';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
         {/*<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />*/}
       </Head>
 
-      <MoviesList />
+      <Auth />
     </>
   );
 };

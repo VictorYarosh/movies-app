@@ -1,4 +1,4 @@
-export interface AuthProps {
+export interface useAuthPageProps {
   id: string;
   onChange: any;
   value: string;
