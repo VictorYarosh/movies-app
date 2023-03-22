@@ -10,6 +10,7 @@ import {
   CardAverageWrapper,
   CardMoviesImage,
   CardMoviesTitle,
+  CardsWrapper,
   Loading,
   WrapperMovies,
 } from './movies-page.styled';
@@ -27,21 +28,23 @@ export const MoviesCards: FC = () => {
         <Row>
           {data.results.map((data) => (
             <Col md={6} lg={4} xl={3} key={data.id}>
-              <CardAverageWrapper>
-                <CardAverageStar>
-                  <Image src={AverageStar} alt="" width={24} height={24} />
-                </CardAverageStar>
-                <CardAverage></CardAverage>
-              </CardAverageWrapper>
+              <CardsWrapper>
+                <CardAverageWrapper>
+                  <CardAverageStar>
+                    <Image src={AverageStar} alt="" width={24} height={24} />
+                  </CardAverageStar>
+                  <CardAverage>{data.vote_average}</CardAverage>
+                </CardAverageWrapper>
 
-              <CardMoviesImage
-                alt=""
-                width={250}
-                height={400}
-                src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-              />
+                <CardMoviesImage
+                  alt=""
+                  width={240}
+                  height={400}
+                  src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
+                />
 
-              <CardMoviesTitle></CardMoviesTitle>
+                <CardMoviesTitle>{data.title}</CardMoviesTitle>
+              </CardsWrapper>
             </Col>
           ))}
         </Row>

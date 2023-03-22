@@ -1,3 +1,4 @@
+import { Text } from 'react-uforms';
 import styled from 'styled-components';
 
 export const SearchButton = styled.button`
@@ -8,23 +9,26 @@ export const SearchButton = styled.button`
   border: none;
   border-radius: 12px;
 `;
-export const SearchInput = styled.div`
-  padding-bottom: 50px;
 
-  input {
-    width: 100%;
-    height: 64px;
-    padding: 0 0 0 65px;
-    border: none;
-    color: white;
-    border-radius: 10px;
+export const SearchText = styled(Text)`
+  background: #121829;
+  width: 100%;
+  height: 64px;
+  padding: 0 0 0 65px;
+  border: none;
+  color: white;
+  border-radius: 10px;
 
-    background: #121829;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-  }
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 `;
+export const SearchInput = styled.div`
+  border-radius: 12px;
+  margin: 10px 0 40px 0;
+  border: 1px solid #323b54;
+`;
+
 export const SearchIconWrapper = styled.div`
   width: 24px;
   height: 24px;

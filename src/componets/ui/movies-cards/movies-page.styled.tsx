@@ -2,7 +2,6 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Loading = styled.div``;
-
 export const GroupLinks = styled.div``;
 export const WrapperMovies = styled.div``;
 
@@ -33,6 +32,13 @@ export const AllMoviesTitleDes = styled.p`
   font-size: 18px;
 `;
 
+export const CardsWrapper = styled.div`
+  background: rgba(32, 40, 62, 0.8);
+  backdrop-filter: blur(40px);
+  margin: 10px 0;
+  border-radius: 8px;
+`;
+
 export const CardAverageWrapper = styled.div`
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(4px);
@@ -59,16 +65,6 @@ export const CardAverage = styled.p`
   margin: 10px;
 `;
 
-export const CardMovies = styled.div`
-  background: rgba(32, 40, 62, 0.8);
-  border-radius: 12px;
-
-  > * {
-    &:nth-last-child {
-      margin-right: 24px;
-    }
-  }
-`;
 export const CardMoviesImage = styled(Image)`
   margin: 8px;
   border-radius: 12px;
@@ -79,5 +75,4 @@ export const CardMoviesTitle = styled.p`
   line-height: 24px;
   color: white;
   background: none;
-  margin: 15px;
 `;

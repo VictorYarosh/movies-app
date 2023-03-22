@@ -5,16 +5,9 @@ import { Col, Row } from 'styled-bootstrap-grid';
 
 import { ContentTitle } from '../../ui/content-title';
 import { MoviesCards } from '../../ui/movies-cards';
-import {
-  AllMovies,
-  AllMoviesTitle,
-  AllMoviesTitleDes,
-  GroupLinks,
-  LinksBtnCarousel,
-} from '../../ui/movies-cards/movies-page.styled';
-import { LinksBtn, LinksWrapper } from '../../ui/navbar/navbar.styled';
+import { AllMovies, AllMoviesTitle, AllMoviesTitleDes } from '../../ui/movies-cards/movies-page.styled';
 import Search from '../../ui/search';
-import { ColumnStyled } from './movies-page.styled';
+import { ColumnStyled, GroupLinks, LinksBtnCarousel, LinksWrapper } from './movies-page.styled';
 import useMoviesPage from './use-movies-page';
 
 const MoviesPage: FC = () => {
@@ -40,20 +33,20 @@ const MoviesPage: FC = () => {
                   All
                   <Link href="/"></Link>
                 </LinksBtnCarousel>
-                <LinksBtn>
+                <LinksBtnCarousel>
                   MoviesList
                   <Link href="/"></Link>
-                </LinksBtn>
-                <LinksBtn>
+                </LinksBtnCarousel>
+                <LinksBtnCarousel>
                   TV Shows
                   <Link href="/"></Link>
-                </LinksBtn>
+                </LinksBtnCarousel>
               </LinksWrapper>
             </GroupLinks>
 
             <AllMovies>
               <AllMoviesTitle>All</AllMoviesTitle>
-              <AllMoviesTitleDes></AllMoviesTitleDes>
+              <AllMoviesTitleDes>()</AllMoviesTitleDes>
             </AllMovies>
           </ColumnStyled>
         </Col>

@@ -12,9 +12,7 @@ const useMoviesCards = () => {
   useEffect(() => {
     const getMoviesAll = async () => {
       try {
-        const response = await axios.get<MoviesProps>(
-          `${api.base}popular?api_key=${api.key}&language=en-US&page=1`
-        );
+        const response = await axios.get<MoviesProps>(`${api.base}popular?api_key=${api.key}&language=en-US&page=1`);
         setData(response.data);
         console.log(response.data);
       } catch (error) {
@@ -27,17 +25,8 @@ const useMoviesCards = () => {
     });
   }, []);
 
-  // const filterMovies = () => {
-  //   let movies = {};
-  //   if (data?.results) {
-  //     data.results.map(({ id, ...res }) => {
-  //       movies = { ...movies, [id]: { ...res } };
-  //     });
-  //     return movies;
-  //   }
-  // };
-
   const handleOnSubmit = () => {};
+
   return {
     data,
     isLoading,
