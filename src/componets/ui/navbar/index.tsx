@@ -12,8 +12,8 @@ const NavBar = () => {
     <Navbar>
       <Logo />
       <Links>
-        <LinksPage onClick={() => router.push('/movies')}>Movies</LinksPage>
-        <LinksPage>TV Shows</LinksPage>
+        <LinksPage onClick={() => router.push('/movies-list')}>Movies</LinksPage>
+        <LinksPage onClick={() => router.push('/tv-shows')}>TV Shows</LinksPage>
         <LinksPage>Suggest me</LinksPage>
         <LinksPage>
           <Image src={ArrowNavbar} alt="arrowNavbar" />
