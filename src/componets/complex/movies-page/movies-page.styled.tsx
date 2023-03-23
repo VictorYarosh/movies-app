@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const MoviesPageWrapper = styled.div`
-  display: flex;
-  padding-top: 50px;
-  flex-direction: column;
-`;
-
 export const ColumnStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -20,8 +14,8 @@ export const GroupLinks = styled.div`
 
 export const LinksWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  padding: 15px 30px;
+  justify-content: space-around;
+  padding: 15px;
 `;
 
 export const LinksBtn = styled.button`

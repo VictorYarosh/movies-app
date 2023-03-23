@@ -2,16 +2,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Loading = styled.div``;
-export const GroupLinks = styled.div``;
 export const WrapperMovies = styled.div``;
 
-export const LinksBtnCarousel = styled.li`
-  display: flex;
-  font-size: 16px;
-  align-items: center;
-  border-radius: 8px;
-  padding: 0 40px;
-`;
 export const AllMovies = styled.div`
   display: flex;
   color: #767e94;
@@ -69,7 +61,7 @@ export const CardMoviesImage = styled(Image)`
   margin: 8px;
   border-radius: 12px;
 `;
-export const CardMoviesTitle = styled.p`
+export const CardMoviesTitle = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;

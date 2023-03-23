@@ -5,7 +5,6 @@ import { Col, Row } from 'styled-bootstrap-grid';
 
 import { ContentTitle } from '../../ui/content-title';
 import { MoviesCards } from '../../ui/movies-cards';
-import { AllMovies, AllMoviesTitle, AllMoviesTitleDes } from '../../ui/movies-cards/movies-page.styled';
 import Search from '../../ui/search';
 import { ColumnStyled, GroupLinks, LinksBtnCarousel, LinksWrapper } from './movies-page.styled';
 import useMoviesPage from './use-movies-page';
@@ -43,11 +42,6 @@ const MoviesPage: FC = () => {
                 </LinksBtnCarousel>
               </LinksWrapper>
             </GroupLinks>
-
-            <AllMovies>
-              <AllMoviesTitle>All</AllMoviesTitle>
-              <AllMoviesTitleDes>()</AllMoviesTitleDes>
-            </AllMovies>
           </ColumnStyled>
         </Col>
       </Row>

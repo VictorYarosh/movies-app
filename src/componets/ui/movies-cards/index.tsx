@@ -5,6 +5,9 @@ import { Col, Row } from 'styled-bootstrap-grid';
 import AverageStar from '../../../assets/images/icons/star.png';
 import LoadingSpinner from '../../../assets/images/lodiang-spiner.svg';
 import {
+  AllMovies,
+  AllMoviesTitle,
+  AllMoviesTitleDes,
   CardAverage,
   CardAverageStar,
   CardAverageWrapper,
@@ -26,6 +29,12 @@ export const MoviesCards: FC = () => {
         </Loading>
       ) : (
         <Row>
+          <Col xl={12}>
+            <AllMovies>
+              <AllMoviesTitle>All</AllMoviesTitle>
+              <AllMoviesTitleDes>({data.total_pages})</AllMoviesTitleDes>
+            </AllMovies>
+          </Col>
           {data.results.map((data) => (
             <Col md={6} lg={4} xl={3} key={data.id}>
               <CardsWrapper>
