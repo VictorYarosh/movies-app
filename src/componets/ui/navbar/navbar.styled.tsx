@@ -49,7 +49,6 @@ export const LinksBtn = styled.li`
   display: flex;
   text-align: center;
   align-items: center;
-  //background-color: #7b6ef6;
 
   height: 40px;
   border-radius: 8px;

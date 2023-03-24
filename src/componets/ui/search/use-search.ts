@@ -1,21 +1,14 @@
-import axios from 'axios';
-
-import { api } from '../movies-cards/const';
+import { useForm } from 'react-uforms';
 
 const useSearch = () => {
-  const handleOnSubmit = async ({ values }: any) => {
-    try {
-      await axios.get(`${api.base}popular?api_key=${api.key}&language=en-US`);
-      if (values.search) {
-        // setMovies([...movies, values.search]);
-      }
-    } catch (error) {
-      console.error(error);
-    }
+  const { submit } = useForm();
+
+  const handleOnClick = () => {
+    submit();
   };
 
   return {
-    handleOnSubmit,
+    handleOnClick,
   };
 };
 export default useSearch;

@@ -1,44 +1,45 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
+import { Form } from 'react-uforms';
+import { Col, Row } from 'styled-bootstrap-grid';
 
 import { ContentTitle } from '../../ui/content-title';
 import { MoviesCards } from '../../ui/movies-cards';
-import { GroupLinks, LinksBtnCarousel } from '../../ui/movies-cards/movies-page.styled';
-import { LinksBtn, LinksWrapper } from '../../ui/navbar/navbar.styled';
 import Search from '../../ui/search';
-import { Column, MoviesPageWrapper } from './movies-page.styled';
+import { ColumnStyled, GroupLinks, LinksBtn, LinksWrapper } from './movies-page.styled';
+import useMoviesPage from './use-movies-page';
 
-const AllPageMovies: FC = () => {
+const MoviesPage: FC = () => {
+  const { handleOnSubmit } = useMoviesPage();
+  const router = useRouter();
   return (
-    <MoviesPageWrapper>
-      <Column xl={8}>
-        <ContentTitle />
-      </Column>
+    <>
+      <Row>
+        <Col xl={8}>
+          <ColumnStyled>
+            <ContentTitle />
+          </ColumnStyled>
+        </Col>
 
-      <Column xl={5}>
-        <Search />
-        <GroupLinks>
-          <LinksWrapper>
-            <LinksBtnCarousel>
-              All
-              <Link href="/"></Link>
-            </LinksBtnCarousel>
-            <LinksBtn>
-              MoviesList
-              <Link href="/"></Link>
-            </LinksBtn>
-            <LinksBtn>
-              TV Shows
-              <Link href="/"></Link>
-            </LinksBtn>
-          </LinksWrapper>
-        </GroupLinks>
-      </Column>
+        <Col xl={5}>
+          <ColumnStyled>
+            <Form onSubmit={handleOnSubmit}>
+              <Search />
+            </Form>
 
-      <Column xl={12}>
-        <MoviesCards />
-      </Column>
-    </MoviesPageWrapper>
+            <GroupLinks>
+              <LinksWrapper>
+                <LinksBtn>All</LinksBtn>
+                <LinksBtn onClick={() => router.push('/movies-list')}>MoviesList</LinksBtn>
+                <LinksBtn onClick={() => router.push('/tv-shows')}>TV Shows</LinksBtn>
+              </LinksWrapper>
+            </GroupLinks>
+          </ColumnStyled>
+        </Col>
+      </Row>
+
+      <MoviesCards />
+    </>
   );
 };
-export default AllPageMovies;
+export default MoviesPage;
