@@ -1,12 +1,11 @@
-import MoviesPage from '../componets/complex/movies-page';
+import MoviesListPage from '../componets/complex/movies-list-page';
 import { Layout } from '../componets/containers/layout';
 
 const MoviesList = () => {
   return (
     <Layout>
-      <MoviesPage />
+      <MoviesListPage />
     </Layout>
   );
 };
-
 export default MoviesList;

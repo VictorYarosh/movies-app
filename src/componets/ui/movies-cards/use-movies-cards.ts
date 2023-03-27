@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import { api } from '../../../const';
+import { api } from './const';
 import { MoviesProps } from './types';
 
 const useMoviesCards = () => {
@@ -25,9 +25,13 @@ const useMoviesCards = () => {
     });
   }, []);
 
+  const handleOnSubmit = () => {};
+
   return {
     data,
     isLoading,
+
+    handleOnSubmit,
   };
 };
 
