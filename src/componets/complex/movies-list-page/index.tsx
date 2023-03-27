@@ -1,13 +1,14 @@
 import React from 'react';
 import { Col, Row } from 'styled-bootstrap-grid';
 
+import { Layout } from '../../containers/layout';
 import { Title, TitleWrapper } from '../../ui/content-title/content-title.styled';
-import { MoviesCards } from '../../ui/movies-cards';
+import MoviesCards from '../../ui/movies-cards';
 import { ColumnStyled } from '../movies-page/movies-page.styled';
 
 const MoviesListPage = () => {
   return (
-    <>
+    <Layout>
       <Row>
         <Col xl={8}>
           <ColumnStyled>
@@ -16,18 +17,10 @@ const MoviesListPage = () => {
             </TitleWrapper>
           </ColumnStyled>
         </Col>
-
-        <Col xl={5}>
-          {/*<ColumnStyled>*/}
-          {/*  <Form onSubmit={handleOnSubmit}>*/}
-          {/*    <Search />*/}
-          {/*  </Form>*/}
-          {/*</ColumnStyled>*/}
-        </Col>
       </Row>
 
       <MoviesCards />
-    </>
+    </Layout>
   );
 };
 export default MoviesListPage;
