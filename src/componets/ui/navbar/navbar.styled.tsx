@@ -33,3 +33,24 @@ export const LinksPage = styled.li`
     font-size: 12px;
   }
 `;
+
+export const LinksWrapper = styled(Links)`
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+  margin-right: -10px;
+`;
+
+export const LinksBtn = styled.li`
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 20px;
+`;

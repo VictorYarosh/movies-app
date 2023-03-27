@@ -2,9 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Loading = styled.div``;
-export const WrapperMovies = styled.div`
-  padding-bottom: 80px;
-`;
+export const WrapperMovies = styled.div``;
 
 export const AllMovies = styled.div`
   display: flex;
