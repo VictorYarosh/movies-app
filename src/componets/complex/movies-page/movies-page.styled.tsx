@@ -26,6 +26,7 @@ export const LinksBtn = styled.button`
   transition: all 0.2s ease-in-out;
   background: none;
   padding: 5px 30px;
+  color: #a8aebf;
 
   &:hover {
     color: white;

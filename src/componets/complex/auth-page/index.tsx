@@ -1,33 +1,33 @@
 import Image from 'next/image';
+import { SetStateAction, useState } from 'react';
 
 import AuthImage from '../../../assets/images/auth-photo.png';
-import IconKey from '../../../assets/images/icons/key-square.png';
-import IconLater from '../../../assets/images/icons/sms.png';
-import {
-  ButtonAuth,
-  InputContainer,
-  InputIconAuth,
-  LoginBlock,
-  LoginTitle,
-  WrapperAuth,
-  WrapperInputContainer,
-} from './auth-page.styled';
+import AuthInput from '../../ui/auth-input';
+import { ButtonAuth, LoginBlock, LoginTitle, WrapperAuth } from './auth-page.styled';
 
 const AuthPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <WrapperAuth>
       <Image alt="" src={AuthImage} />
       <LoginBlock>
         <LoginTitle>Login</LoginTitle>
 
-        <WrapperInputContainer>
-          <InputIconAuth src={IconLater} alt="" />
-          <InputContainer placeholder="Email" />
-        </WrapperInputContainer>
-        <WrapperInputContainer>
-          <InputIconAuth src={IconKey} alt="" />
-          <InputContainer placeholder="Password" />
-        </WrapperInputContainer>
+        <AuthInput
+          label="Email"
+          id="id"
+          onChange={(ev: { target: { value: SetStateAction<string> } }) => setEmail(ev.target.value)}
+          value={email}
+          type="Email"
+        />
+        <AuthInput
+          label="Password"
+          id="password"
+          onChange={(ev: { target: { value: SetStateAction<string> } }) => setPassword(ev.target.value)}
+          value={password}
+          type="password"
+        />
 
         <ButtonAuth>Login</ButtonAuth>
       </LoginBlock>
