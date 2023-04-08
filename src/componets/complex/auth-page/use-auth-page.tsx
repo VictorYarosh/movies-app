@@ -1,8 +1,4 @@
-import { FC } from 'react';
-
-import { useAuthPageProps } from './types';
-
-const useAuthPage: FC<useAuthPageProps> = () => {
+const useAuthPage = () => {
   return <div></div>;
 };
 export default useAuthPage;
