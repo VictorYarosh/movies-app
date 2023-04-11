@@ -1,13 +1,12 @@
 import MoviesPage from '../componets/complex/movies-page';
 import { Layout } from '../componets/containers/layout';
 
-const Home = () => {
+const MoviesList = () => {
   return (
     <Layout>
-      {/*<AuthPage />*/}
       <MoviesPage />
     </Layout>
   );
 };
 
-export default Home;
+export default MoviesList;

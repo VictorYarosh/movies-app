@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { FC } from 'react';
 import { Col, Row } from 'styled-bootstrap-grid';
 
 import AverageStar from '../../../assets/images/icons/star.png';
@@ -19,7 +19,7 @@ import {
 } from './movies-page.styled';
 import useMoviesCards from './use-movies-cards';
 
-const MoviesCards = () => {
+export const MoviesCards: FC = () => {
   const { data, isLoading } = useMoviesCards();
   return (
     <WrapperMovies>
@@ -61,4 +61,3 @@ const MoviesCards = () => {
     </WrapperMovies>
   );
 };
-export default MoviesCards;

@@ -26,7 +26,6 @@ export const LinksBtn = styled.button`
   transition: all 0.2s ease-in-out;
   background: none;
   padding: 5px 30px;
-  color: #8e95a9;
 
   &:hover {
     color: white;
@@ -34,4 +33,10 @@ export const LinksBtn = styled.button`
     transform: scale(1.1);
     border-radius: 8px;
   }
+`;
+
+export const LinksBtnCarousel = styled(LinksBtn)`
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #8e95a9;
 `;
