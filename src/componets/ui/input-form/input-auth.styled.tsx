@@ -1,11 +1,16 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-export const WrapperInputContainer = styled.div`
+export const InputBlock = styled.div`
   width: 100%;
-  display: flex;
 `;
-
+export const WrapperInputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+export const LabelInput = styled.label`
+  position: absolute;
+`;
 export const InputIconAuth = styled(Image)`
   position: absolute;
   width: 24px;

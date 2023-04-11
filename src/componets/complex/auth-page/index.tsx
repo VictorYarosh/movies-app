@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import AuthImage from '../../../assets/images/auth-photo.png';
-import InputAuth from '../../ui/input';
+import InputForm from '../../ui/input-form';
 import { LoginBlock, LoginTitle, WrapperAuth } from './auth-page.styled';
 
 const AuthPage = () => {
@@ -10,8 +10,7 @@ const AuthPage = () => {
       <Image alt="" src={AuthImage} />
       <LoginBlock>
         <LoginTitle>Login</LoginTitle>
-
-        <InputAuth id="id" label="label" onChange="onChange" value="value" />
+        <InputForm />
       </LoginBlock>
     </WrapperAuth>
   );

@@ -1,4 +1,4 @@
-export interface useInputAuthProps {
+export interface InputFormProps {
   id: string;
   onChange: any;
   value: string;
