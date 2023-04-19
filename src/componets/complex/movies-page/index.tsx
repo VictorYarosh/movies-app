@@ -12,6 +12,7 @@ import useMoviesPage from './use-movies-page';
 const MoviesPage: FC = () => {
   const { handleOnSubmit } = useMoviesPage();
   const router = useRouter();
+
   return (
     <>
       <Row>
@@ -21,7 +22,7 @@ const MoviesPage: FC = () => {
           </ColumnStyled>
         </Col>
 
-        <Col xl={5}>
+        <Col md={6} xl={5}>
           <ColumnStyled>
             <Form onSubmit={handleOnSubmit}>
               <Search />
