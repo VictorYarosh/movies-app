@@ -62,9 +62,14 @@ export const CardMoviesImage = styled(Image)`
   border-radius: 12px;
 `;
 export const CardMoviesTitle = styled.div`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: white;
-  background: none;
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    background: none;
+  }
 `;

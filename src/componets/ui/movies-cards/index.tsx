@@ -52,7 +52,9 @@ export const MoviesCards: FC = () => {
                   src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
                 />
 
-                <CardMoviesTitle>{data.title}</CardMoviesTitle>
+                <CardMoviesTitle>
+                  <p>{data.title}</p>
+                </CardMoviesTitle>
               </CardsWrapper>
             </Col>
           ))}
