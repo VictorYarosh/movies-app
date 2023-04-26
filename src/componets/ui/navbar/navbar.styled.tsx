@@ -1,7 +1,7 @@
 import { Container } from 'styled-bootstrap-grid';
 import styled from 'styled-components';
 
-export const Navbar = styled(Container)`
+export const NavbarWrapper = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;

@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import React, { FC } from 'react';
 import { Form } from 'react-uforms';
 import { Col, Row } from 'styled-bootstrap-grid';
@@ -11,7 +11,6 @@ import useMoviesPage from './use-movies-page';
 
 const MoviesPage: FC = () => {
   const { handleOnSubmit } = useMoviesPage();
-  const router = useRouter();
 
   return (
     <>
@@ -30,9 +29,11 @@ const MoviesPage: FC = () => {
 
             <GroupLinks>
               <LinksWrapper>
-                <LinksBtn>All</LinksBtn>
-                <LinksBtn onClick={() => router.push('/movies-list')}>MoviesList</LinksBtn>
-                <LinksBtn onClick={() => router.push('/tv-shows')}>TV Shows</LinksBtn>
+                <LinksBtn $primary>All</LinksBtn>
+                <LinksBtn>MoviesList</LinksBtn>
+                <LinksBtn>
+                  <Link href="/tv-shows-page">TV Shows</Link>
+                </LinksBtn>
               </LinksWrapper>
             </GroupLinks>
           </ColumnStyled>

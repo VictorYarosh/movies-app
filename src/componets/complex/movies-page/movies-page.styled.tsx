@@ -14,22 +14,21 @@ export const GroupLinks = styled.div`
 
 export const LinksWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
-  padding: 15px;
+  justify-content: space-between;
+  padding: 7px;
 `;
 
-export const LinksBtn = styled.button`
+export const LinksBtn = styled.button.attrs((props) => ({
+  type: props,
+}))`
+  padding: 10px;
   border: none;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  background: none;
 
-  &:hover {
-    color: white;
-    background-color: #7b6ef6;
-    transform: scale(1.1);
-    border-radius: 8px;
-  }
+  background: ${(props) => (props.$primary ? '#7b6ef6' : 'none')};
+  color: ${(props) => (props.$primary ? 'white' : '#767e94')};
+  border-radius: 10px;
 `;

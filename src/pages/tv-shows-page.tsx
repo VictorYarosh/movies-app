@@ -1,10 +1,10 @@
-import MoviesPage from '../componets/complex/movies-page';
+import TvShowsPage from '../componets/complex/tv-shows-page';
 import { Layout } from '../componets/containers/layout';
 
 const Page = () => {
   return (
     <Layout>
-      <MoviesPage />
+      <TvShowsPage />
     </Layout>
   );
 };
