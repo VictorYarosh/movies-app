@@ -1,7 +1,7 @@
 import TvShowsPage from '../componets/complex/tv-shows-page';
 import { Layout } from '../componets/containers/layout';
 
-const Page = () => {
+const TvShows = () => {
   return (
     <Layout>
       <TvShowsPage />
@@ -9,4 +9,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default TvShows;

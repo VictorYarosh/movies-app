@@ -3,7 +3,6 @@ import React, { FC } from 'react';
 import { Form } from 'react-uforms';
 import { Col, Row } from 'styled-bootstrap-grid';
 
-import { ContentTitle } from '../../ui/content-title';
 import { MoviesCards } from '../../ui/movies-cards';
 import Search from '../../ui/search';
 import { ColumnStyled, GroupLinks, LinksBtn, LinksWrapper } from './movies-page.styled';
@@ -16,9 +15,7 @@ const MoviesPage: FC = () => {
     <>
       <Row>
         <Col xl={8}>
-          <ColumnStyled>
-            <ContentTitle />
-          </ColumnStyled>
+          <ColumnStyled></ColumnStyled>
         </Col>
 
         <Col md={6} xl={5}>

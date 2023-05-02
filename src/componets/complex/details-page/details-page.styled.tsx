@@ -2,19 +2,25 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const WrapperBigPoster = styled.div`
-  padding: 40px 0;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
 `;
 export const BigPoster = styled(Image)`
   border-radius: 40px;
   width: 100%;
   height: 480px;
-  position: absolute;
 `;
 
 export const NameBlock = styled.div`
-  background-color: blue;
+  background: rgba(32, 40, 62, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+
+  border-radius: 24px;
   width: 50%;
-  height: 50px;
+
+  top: -50px;
   position: relative;
 `;
 export const Breadcrumbs = styled.ul`
@@ -23,6 +29,7 @@ export const Breadcrumbs = styled.ul`
   & > li:after {
     content: '${(props) => props.separator || '/'}';
     padding: 0 8px;
+    color: #beb7fb;
   }
 `;
 
@@ -35,11 +42,18 @@ export const Crumb = styled.li`
   }
 
   a {
-    color: green;
+    color: #beb7fb;
     text-decoration: none;
     &:hover,
     &:active {
       text-decoration: underline;
     }
   }
+`;
+export const TitleMovie = styled.p`
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #ebeef5;
+  margin: 0;
 `;

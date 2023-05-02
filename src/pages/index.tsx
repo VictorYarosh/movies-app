@@ -1,7 +1,7 @@
 import MoviesPage from '../componets/complex/movies-page';
 import { Layout } from '../componets/containers/layout';
 
-const Page = () => {
+const Home = () => {
   return (
     <Layout>
       <MoviesPage />
@@ -9,4 +9,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Home;

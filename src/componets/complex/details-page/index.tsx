@@ -2,7 +2,8 @@ import React from 'react';
 import { Col, Row } from 'styled-bootstrap-grid';
 
 import PosterImage from '../../../assets/images/poster/Black-Widow-Box-Office.png';
-import { BigPoster, Breadcrumbs, Crumb, NameBlock, WrapperBigPoster } from './details-page.styled';
+import MainCard from '../../ui/main-card';
+import { BigPoster, Breadcrumbs, Crumb, NameBlock, TitleMovie, WrapperBigPoster } from './details-page.styled';
 const DetailsPage = () => {
   return (
     <>
@@ -20,7 +21,10 @@ const DetailsPage = () => {
                 <a href="#">Wine</a>
               </Crumb>
             </Breadcrumbs>
+            <TitleMovie>Avengers: Endgame</TitleMovie>
           </NameBlock>
+
+          <MainCard />
         </Col>
       </Row>
     </>

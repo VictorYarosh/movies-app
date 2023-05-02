@@ -1,7 +1,7 @@
 import DetailsPage from '../componets/complex/details-page';
 import { Layout } from '../componets/containers/layout';
 
-const Page = () => {
+const Details = () => {
   return (
     <Layout>
       <DetailsPage />
@@ -9,4 +9,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Details;

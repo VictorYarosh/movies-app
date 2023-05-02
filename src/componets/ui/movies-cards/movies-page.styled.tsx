@@ -66,8 +66,10 @@ export const CardMoviesImage = styled(Image)`
 export const CardMoviesTitle = styled.div`
   display: flex;
   justify-content: center;
+  padding: 20px;
 
   p {
+    display: contents;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
