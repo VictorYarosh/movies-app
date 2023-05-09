@@ -1,11 +1,15 @@
 import React from 'react';
+import { Form } from 'react-uforms';
 import { Col, Row } from 'styled-bootstrap-grid';
 
 import { Title, TitleWrapper } from '../../ui/content-title/content-title.styled';
 import { MoviesCards } from '../../ui/movies-cards';
-import { ColumnStyled } from '../movies-page/movies-page.styled';
+import Search from '../../ui/search';
+import { ColumnStyled } from '../home-page/home-page.styled';
+import useHomePage from '../home-page/use-home-page';
 
-const MoviesListPage = () => {
+const MoviesPage = () => {
+  const { handleOnSubmit } = useHomePage();
   return (
     <>
       <Row>
@@ -17,12 +21,12 @@ const MoviesListPage = () => {
           </ColumnStyled>
         </Col>
 
-        <Col xl={5}>
-          {/*<ColumnStyled>*/}
-          {/*  <Form onSubmit={handleOnSubmit}>*/}
-          {/*    <Search />*/}
-          {/*  </Form>*/}
-          {/*</ColumnStyled>*/}
+        <Col md={6} xl={5}>
+          <ColumnStyled>
+            <Form onSubmit={handleOnSubmit}>
+              <Search />
+            </Form>
+          </ColumnStyled>
         </Col>
       </Row>
 
@@ -30,4 +34,4 @@ const MoviesListPage = () => {
     </>
   );
 };
-export default MoviesListPage;
+export default MoviesPage;

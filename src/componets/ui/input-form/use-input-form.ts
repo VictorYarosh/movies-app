@@ -26,7 +26,7 @@ const useInputForm: () => {
       console.log('Дані не валідні!');
       return;
     }
-    router.push('/movies-page');
+    router.push('/home-page');
   };
 
   return { handleEmailChange, handlePasswordChange, handleFormSubmit, email, password };

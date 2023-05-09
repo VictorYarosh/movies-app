@@ -2,7 +2,9 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Loading = styled.div``;
-export const WrapperMovies = styled.div``;
+export const WrapperMovies = styled.div`
+  padding-bottom: 75px;
+`;
 
 export const AllMovies = styled.div`
   display: flex;
@@ -64,8 +66,10 @@ export const CardMoviesImage = styled(Image)`
 export const CardMoviesTitle = styled.div`
   display: flex;
   justify-content: center;
+  padding: 20px;
 
   p {
+    display: contents;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;

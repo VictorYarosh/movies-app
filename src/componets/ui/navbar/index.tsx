@@ -1,26 +1,37 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import React from 'react';
 
 import ArrowNavbar from '../../../assets/images/icons/arrow-right.png';
 import Logo from '../logo';
-import { Links, LinksPage, Navbar } from './navbar.styled';
+import { Links, LinksPage, NavbarWrapper } from './navbar.styled';
 
-const NavBar = () => {
-  const router = useRouter();
+const Navbar = () => {
   return (
-    <Navbar>
+    <NavbarWrapper>
       <Logo />
       <Links>
-        <LinksPage onClick={() => router.push('/movies-list')}>Movies</LinksPage>
-        <LinksPage onClick={() => router.push('/tv-shows')}>TV Shows</LinksPage>
-        <LinksPage>Suggest me</LinksPage>
+        <LinksPage>
+          <Link href="/movies" passHref>
+            Movies
+          </Link>
+        </LinksPage>
+        <LinksPage>
+          <Link href="/tv-shows" passHref>
+            TV Shows
+          </Link>
+        </LinksPage>
+        <LinksPage>
+          <Link href="/" passHref>
+            Suggest me
+          </Link>
+        </LinksPage>
         <LinksPage>
           <Image src={ArrowNavbar} alt="arrowNavbar" />
         </LinksPage>
       </Links>
-    </Navbar>
+    </NavbarWrapper>
   );
 };
 
-export default NavBar;
+export default Navbar;

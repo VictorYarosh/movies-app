@@ -7,7 +7,6 @@ import { LayoutStyled } from './layout.styled';
 export const Layout: FC<PropsWithChildren> = ({ children }) => (
   <LayoutStyled>
     <Navbar />
-
     <Container>{children}</Container>
   </LayoutStyled>
 );

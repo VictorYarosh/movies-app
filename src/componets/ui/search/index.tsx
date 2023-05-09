@@ -15,7 +15,7 @@ const Search: FC = () => {
           <Image src={SearchIcon} alt="searchIcon" />
         </SearchIconWrapper>
       </SearchButton>
-      <SearchText type="text" name="search" id="search" placeholder="Search MoviesList or TV Shows" />
+      <SearchText type="text" name="search" id="search" placeholder="Search" />
     </SearchInput>
   );
 };
