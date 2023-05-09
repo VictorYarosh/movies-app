@@ -1,4 +1,4 @@
-import TvShowsPage from '../componets/complex/tv-shows-page';
+import TvShowsPage from '../componets/complex/tv-shows';
 import { Layout } from '../componets/containers/layout';
 
 const TvShows = () => {

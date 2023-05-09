@@ -12,12 +12,12 @@ const Navbar = () => {
       <Logo />
       <Links>
         <LinksPage>
-          <Link href="/" passHref>
+          <Link href="/movies" passHref>
             Movies
           </Link>
         </LinksPage>
         <LinksPage>
-          <Link href="/tv-shows-page" passHref>
+          <Link href="/tv-shows" passHref>
             TV Shows
           </Link>
         </LinksPage>

@@ -5,7 +5,7 @@ import { api } from '../../ui/movies-cards/const';
 import { MoviesProps } from '../../ui/movies-cards/types';
 import useMoviesCards from '../../ui/movies-cards/use-movies-cards';
 
-const useMoviesPage = () => {
+const useHomePage = () => {
   const [isActive] = useState(true);
 
   const { data } = useMoviesCards();
@@ -27,4 +27,4 @@ const useMoviesPage = () => {
     isActive,
   };
 };
-export default useMoviesPage;
+export default useHomePage;

@@ -1,10 +1,10 @@
-import MoviesPage from '../componets/complex/movies-page';
+import HomePage from '../componets/complex/home-page';
 import { Layout } from '../componets/containers/layout';
 
 const Home = () => {
   return (
     <Layout>
-      <MoviesPage />
+      <HomePage />
     </Layout>
   );
 };
