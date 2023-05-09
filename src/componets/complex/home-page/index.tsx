@@ -27,7 +27,7 @@ const HomePage: FC = () => {
           </ColumnStyled>
         </Col>
 
-        <Col sm={7} md={6} xl={5}>
+        <Col sm={7} md={8} lg={6} xl={5}>
           <ColumnStyled>
             <Form onSubmit={handleOnSubmit}>
               <Search />

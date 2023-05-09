@@ -37,7 +37,7 @@ export const Button = styled.button`
   color: white;
   border-radius: 10px;
 `;
-export const ButtonToggle = styled(Button)`
+export const ButtonToggle = styled(Button)<{ active: any }>`
   background: ${(props) => (props.active ? '#7b6ef6' : 'transparent')};
   color: white;
   border: none;
