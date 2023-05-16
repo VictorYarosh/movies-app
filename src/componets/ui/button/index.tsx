@@ -3,19 +3,28 @@ import React, { useState } from 'react';
 
 import { ButtonGroup, ButtonToggle } from './button.styled';
 
-const types = ['All', 'Movies', 'TV-Shows'];
-
 const ToggleGroup = () => {
-  const [active, setActive] = useState(types[0]);
+  const [active] = useState();
   return (
-    <ButtonGroup>
-      {types.map((type) => (
-        <Link key={type} href={type === 'All' ? '/' : `/${type.toLowerCase()}`}>
-          <ButtonToggle active={active === type} onClick={() => setActive(type)}>
-            {type}
-          </ButtonToggle>
+    <ButtonGroup role="group" aria-label="Basic checkbox toggle button group">
+      <ButtonToggle active={active}>
+        {' '}
+        <Link href="/" passHref>
+          All
         </Link>
-      ))}
+      </ButtonToggle>
+      <ButtonToggle active={active}>
+        {' '}
+        <Link href="/movies" passHref>
+          Movies
+        </Link>
+      </ButtonToggle>
+      <ButtonToggle active={active}>
+        {' '}
+        <Link href="/tv-shows" passHref>
+          TV-Shows
+        </Link>
+      </ButtonToggle>
     </ButtonGroup>
   );
 };

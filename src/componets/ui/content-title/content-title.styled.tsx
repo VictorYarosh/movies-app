@@ -7,7 +7,7 @@ export const TitleWrapper = styled.div`
 export const Title = styled.h1`
   color: #ebeef5;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 50px;
 `;
 
 export const TitleDescription = styled.p`

@@ -1,20 +1,5 @@
 import styled from 'styled-components';
 
-export const GroupLinks = styled.div`
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(40px);
-  height: auto;
-`;
-
-export const LinksWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 7px;
-`;
-
-export const LinksBtn = styled.button``;
-
 export const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-between;
@@ -42,7 +27,7 @@ export const ButtonToggle = styled(Button)<{ active: any }>`
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
   padding: 10px 30px;

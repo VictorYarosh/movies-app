@@ -62,7 +62,23 @@ export const CardAverage = styled.p`
 export const CardMoviesImage = styled(Image)`
   margin: 8px;
   border-radius: 12px;
+
+  @media (max-width: 1024px) {
+    width: 270px;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 315px;
+  }
+  @media (max-width: 425px) {
+    width: 380px;
+  }
+  @media (max-width: 375px) {
+    width: 330px;
+  }
 `;
+
 export const CardMoviesTitle = styled.div`
   display: flex;
   justify-content: center;

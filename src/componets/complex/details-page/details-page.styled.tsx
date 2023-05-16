@@ -23,7 +23,7 @@ export const NameBlock = styled.div`
   top: -50px;
   position: relative;
 `;
-export const Breadcrumbs = styled.ul`
+export const Breadcrumbs = styled.ul<{ separator: any }>`
   list-style: none;
   padding: 0;
   & > li:after {

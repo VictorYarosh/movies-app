@@ -34,18 +34,6 @@ const HomePage: FC = () => {
             </Form>
 
             <ToggleGroup />
-
-            {/*<GroupLinks>*/}
-            {/*  <LinksWrapper>*/}
-            {/*    <ToggleGroup>All</LinksBtn>*/}
-            {/*    <Link href="/movies">*/}
-            {/*      <ToggleGroup>Movies</ToggleGroup>*/}
-            {/*    </Link>*/}
-            {/*    <Link href="/tv-shows">*/}
-            {/*      <ToggleGroup>TV Shows</ToggleGroup>*/}
-            {/*    </Link>*/}
-            {/*  </LinksWrapper>*/}
-            {/*</GroupLinks>*/}
           </ColumnStyled>
         </Col>
       </Row>

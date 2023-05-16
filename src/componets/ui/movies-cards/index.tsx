@@ -21,6 +21,7 @@ import useMoviesCards from './use-movies-cards';
 
 export const MoviesCards: FC = () => {
   const { data, isLoading } = useMoviesCards();
+
   return (
     <WrapperMovies>
       {isLoading ? (

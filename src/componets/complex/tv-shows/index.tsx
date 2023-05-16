@@ -2,6 +2,7 @@ import React from 'react';
 import { Form } from 'react-uforms';
 import { Col, Row } from 'styled-bootstrap-grid';
 
+import ToggleGroup from '../../ui/button';
 import { Title, TitleWrapper } from '../../ui/content-title/content-title.styled';
 import { MoviesCards } from '../../ui/movies-cards';
 import Search from '../../ui/search';
@@ -26,6 +27,7 @@ const TvShowsPage = () => {
             <Form onSubmit={handleOnSubmit}>
               <Search />
             </Form>
+            <ToggleGroup />
           </ColumnStyled>
         </Col>
       </Row>

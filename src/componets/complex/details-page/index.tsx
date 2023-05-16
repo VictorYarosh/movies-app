@@ -1,3 +1,4 @@
+import { any } from 'prop-types';
 import React from 'react';
 import { Col, Row } from 'styled-bootstrap-grid';
 
@@ -13,7 +14,7 @@ const DetailsPage = () => {
             <BigPoster src={PosterImage} alt="" />
           </WrapperBigPoster>
           <NameBlock>
-            <Breadcrumbs>
+            <Breadcrumbs separator={any}>
               <Crumb>
                 <a href="#">Wine</a>
               </Crumb>
