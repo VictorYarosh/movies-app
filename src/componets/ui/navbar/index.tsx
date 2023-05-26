@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 import ArrowNavbar from '../../../assets/images/icons/arrow-right.png';
 import Logo from '../logo';
 import { Links, LinksPage, NavbarWrapper } from './navbar.styled';
 
 const Navbar = () => {
+  const [active] = useState();
   return (
     <NavbarWrapper>
       <Logo />
-      <Links>
+      <Links active={active}>
         <LinksPage>
           <Link href="/movies" passHref>
             Movies

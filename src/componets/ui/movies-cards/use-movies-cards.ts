@@ -27,13 +27,11 @@ const useMoviesCards = () => {
     });
   }, []);
 
-  const handleOnSubmit = () => {};
-
   return {
     data,
     isLoading,
 
-    handleOnSubmit,
+    setData,
   };
 };
 

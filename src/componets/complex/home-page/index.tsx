@@ -11,11 +11,10 @@ import useHomePage from './use-home-page';
 
 const HomePage: FC = () => {
   const { handleOnSubmit } = useHomePage();
-
   return (
     <>
       <Row>
-        <Col xl={8}>
+        <Col lg={7} xl={8}>
           <ColumnStyled>
             <TitleWrapper>
               <Title>MaileHereko</Title>

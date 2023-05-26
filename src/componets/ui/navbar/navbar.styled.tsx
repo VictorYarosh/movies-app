@@ -8,12 +8,13 @@ export const NavbarWrapper = styled(Container)`
   backdrop-filter: blur(20px);
 `;
 
-export const Links = styled.ul`
+export const Links = styled.ul<{ active: any }>`
   text-decoration: none;
   color: white;
   display: flex;
   list-style: none;
   padding: 0;
+  background: ${(props) => (props.active ? '#7b6ef6' : 'transparent')};
 
   @media (max-width: 425px) {
     margin-top: 20px;
@@ -27,6 +28,12 @@ export const LinksPage = styled.li`
   line-height: 24px;
   cursor: pointer;
   color: #a8aebf;
+
+  &:hover {
+    background: #7b6ef6;
+    color: #a8aebf;
+    border-radius: 15px;
+  }
 
   @media (max-width: 425px) {
     padding: 10px;

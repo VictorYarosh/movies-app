@@ -2,7 +2,7 @@ import { Text } from 'react-uforms';
 import styled from 'styled-components';
 
 export const SearchButton = styled.button`
-  margin: 20px 10px;
+  padding: 20px 15px;
   position: absolute;
   cursor: pointer;
   background: #121829;
